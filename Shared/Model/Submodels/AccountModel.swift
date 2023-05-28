@@ -33,7 +33,18 @@ struct Account {
     }
 }
 
-class AccountModel {
+protocol AccountModel {
+    var account: CurrentValueSubject<Account?, Never> { get }
+
+    func authorizeUser(_ result: Result<ASAuthorization, Error>)
+
+    func appendOrder(_ order: Order)
+    func canRedeemSmoothie() -> Bool
+    func redeemSmoothie()
+    func clearUnstampedPoints()
+}
+
+class AccountModelDefault: AccountModel {
     private(set) var account = CurrentValueSubject<Account?, Never>(nil)
 
     private let userDefaults = UserDefaults.standard

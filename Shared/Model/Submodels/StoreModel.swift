@@ -29,13 +29,20 @@ struct DisplayProduct {
     }
 }
 
-class StoreModel {
+protocol StoreModel {
+    var allRecipesUnlocked: CurrentValueSubject<Bool, Never> { get }
+    var unlockAllRecipesProduct: CurrentValueSubject<DisplayProduct?, Never> { get }
+
+    func purchase(product: DisplayProduct)
+}
+
+class StoreModelDefault: StoreModel {
     static let unlockAllRecipesIdentifier = "com.example.apple-samplecode.fruta.unlock-recipes"
 
     let allRecipesUnlocked = CurrentValueSubject<Bool, Never>(false)
     let unlockAllRecipesProduct = CurrentValueSubject<DisplayProduct?, Never>(nil)
 
-    private let allProductIdentifiers = Set([StoreModel.unlockAllRecipesIdentifier])
+    private let allProductIdentifiers = Set([StoreModelDefault.unlockAllRecipesIdentifier])
     private var fetchedProducts: [Product] = []
     private var updatesHandler: Task<Void, Error>? = nil
 
@@ -59,7 +66,7 @@ class StoreModel {
             do {
                 let result = try await product.purchase()
                 guard case .success(.verified(let transaction)) = result,
-                      transaction.productID == StoreModel.unlockAllRecipesIdentifier else {
+                      transaction.productID == Self.unlockAllRecipesIdentifier else {
                     return
                 }
                 self.allRecipesUnlocked.send(true)
@@ -73,7 +80,7 @@ class StoreModel {
         Task { @MainActor in
             self.fetchedProducts = try await Product.products(for: allProductIdentifiers)
             self.unlockAllRecipesProduct.send(DisplayProduct(
-                from: fetchedProducts.first { $0.id == StoreModel.unlockAllRecipesIdentifier }))
+                from: fetchedProducts.first { $0.id == Self.unlockAllRecipesIdentifier }))
             // Check if the user owns all recipes at app launch.
             await self.updateAllRecipesOwned()
         }
@@ -101,7 +108,7 @@ class StoreModel {
                 print("Unverified transaction update: \(update)")
                 continue
             }
-            guard transaction.productID == StoreModel.unlockAllRecipesIdentifier else {
+            guard transaction.productID == Self.unlockAllRecipesIdentifier else {
                 continue
             }
             // If this transaction was revoked, make sure the user no longer

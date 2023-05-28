@@ -9,7 +9,15 @@
 import Foundation
 import Combine
 
-class FavoriteSmoothiesModel {
+protocol FavoriteSmoothiesModel {
+    var favoriteSmoothieIds: CurrentValueSubject<Set<String>, Never> { get }
+
+    func toggleFavorite(smoothieId: Smoothie.ID)
+
+    func isFavorite(smoothie: Smoothie) -> Bool
+}
+
+class FavoriteSmoothiesModelDefault: FavoriteSmoothiesModel {
     private(set) var favoriteSmoothieIds = CurrentValueSubject<Set<String>, Never>([])
 
     private let userDefaults = UserDefaults.standard

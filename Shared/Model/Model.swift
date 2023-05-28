@@ -17,11 +17,20 @@ class Model {
     let orderModel: OrderModel
     let storeModel: StoreModel
 
-    init() {
-        favoriteSmoothiesModel = FavoriteSmoothiesModel()
-        accountModel = AccountModel()
-        storeModel = StoreModel()
-        orderModel = OrderModel(accountModel: accountModel)
+    init(forConfiguration: Bool) {
+        if !forConfiguration {
+            favoriteSmoothiesModel = FavoriteSmoothiesModelDefault()
+            accountModel = AccountModelDefault()
+            storeModel = StoreModelDefault()
+            orderModel = OrderModelDefault(accountModel: accountModel)
+        } else {
+            favoriteSmoothiesModel = FavoriteSmoothiesModelConfigurable()
+            accountModel = AccountModelConfigurable()
+            storeModel = StoreModelConfigurable()
+            orderModel = OrderModelConfigurable(accountModel: accountModel)
+        }
+
+        // non configurable models
         searchModel = SearchModel()
     }
 }

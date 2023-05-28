@@ -65,6 +65,14 @@
 		4552D0222A236A52005B8F3F /* MeasuredIngredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0202A236A52005B8F3F /* MeasuredIngredient.swift */; };
 		4552D0262A236B03005B8F3F /* Smoothie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0242A236B03005B8F3F /* Smoothie.swift */; };
 		4552D0272A236B03005B8F3F /* Ingredient.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0252A236B03005B8F3F /* Ingredient.swift */; };
+		4552D0322A236FAD005B8F3F /* FavoriteSmoothiesModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0292A236FAD005B8F3F /* FavoriteSmoothiesModelConfigurable.swift */; };
+		4552D0332A236FAD005B8F3F /* OrderModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D02A2A236FAD005B8F3F /* OrderModelConfigurable.swift */; };
+		4552D0342A236FAD005B8F3F /* StoreModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D02B2A236FAD005B8F3F /* StoreModelConfigurable.swift */; };
+		4552D0352A236FAD005B8F3F /* ConfigurationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D02C2A236FAD005B8F3F /* ConfigurationManager.swift */; };
+		4552D0362A236FAD005B8F3F /* CommonConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D02E2A236FAD005B8F3F /* CommonConfig.swift */; };
+		4552D0372A236FAD005B8F3F /* StoreConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D02F2A236FAD005B8F3F /* StoreConfig.swift */; };
+		4552D0382A236FAD005B8F3F /* AccountConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0302A236FAD005B8F3F /* AccountConfig.swift */; };
+		4552D0392A236FAD005B8F3F /* AccountModelConfigurable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4552D0312A236FAD005B8F3F /* AccountModelConfigurable.swift */; };
 		610F54EE26158DDB001D3AA0 /* AppTabNavigation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 611716C72469DF41000FFDD9 /* AppTabNavigation.swift */; };
 		610F54FE26158DDB001D3AA0 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 5E6123FF244E8B32004DDFF7 /* Assets.xcassets */; };
 		61A8CB8A26166F2A002845E4 /* Model.swift in Sources */ = {isa = PBXBuildFile; fileRef = 61A8CB8926166F2A002845E4 /* Model.swift */; };
@@ -168,6 +176,14 @@
 		4552D0202A236A52005B8F3F /* MeasuredIngredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MeasuredIngredient.swift; sourceTree = "<group>"; };
 		4552D0242A236B03005B8F3F /* Smoothie.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Smoothie.swift; sourceTree = "<group>"; };
 		4552D0252A236B03005B8F3F /* Ingredient.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Ingredient.swift; sourceTree = "<group>"; };
+		4552D0292A236FAD005B8F3F /* FavoriteSmoothiesModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FavoriteSmoothiesModelConfigurable.swift; sourceTree = "<group>"; };
+		4552D02A2A236FAD005B8F3F /* OrderModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OrderModelConfigurable.swift; sourceTree = "<group>"; };
+		4552D02B2A236FAD005B8F3F /* StoreModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreModelConfigurable.swift; sourceTree = "<group>"; };
+		4552D02C2A236FAD005B8F3F /* ConfigurationManager.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ConfigurationManager.swift; sourceTree = "<group>"; };
+		4552D02E2A236FAD005B8F3F /* CommonConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CommonConfig.swift; sourceTree = "<group>"; };
+		4552D02F2A236FAD005B8F3F /* StoreConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = StoreConfig.swift; sourceTree = "<group>"; };
+		4552D0302A236FAD005B8F3F /* AccountConfig.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountConfig.swift; sourceTree = "<group>"; };
+		4552D0312A236FAD005B8F3F /* AccountModelConfigurable.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountModelConfigurable.swift; sourceTree = "<group>"; };
 		5E6123FF244E8B32004DDFF7 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		610F550626158DDB001D3AA0 /* Fruta iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Fruta iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		6111A1E426157D870046AAA9 /* Configuration.storekit */ = {isa = PBXFileReference; lastKnownFileType = text; path = Configuration.storekit; sourceTree = "<group>"; };
@@ -390,6 +406,29 @@
 			path = Objects;
 			sourceTree = "<group>";
 		};
+		4552D0282A236FAD005B8F3F /* Configuration */ = {
+			isa = PBXGroup;
+			children = (
+				4552D02C2A236FAD005B8F3F /* ConfigurationManager.swift */,
+				4552D0312A236FAD005B8F3F /* AccountModelConfigurable.swift */,
+				4552D0292A236FAD005B8F3F /* FavoriteSmoothiesModelConfigurable.swift */,
+				4552D02A2A236FAD005B8F3F /* OrderModelConfigurable.swift */,
+				4552D02B2A236FAD005B8F3F /* StoreModelConfigurable.swift */,
+				4552D02D2A236FAD005B8F3F /* Configs */,
+			);
+			path = Configuration;
+			sourceTree = "<group>";
+		};
+		4552D02D2A236FAD005B8F3F /* Configs */ = {
+			isa = PBXGroup;
+			children = (
+				4552D02E2A236FAD005B8F3F /* CommonConfig.swift */,
+				4552D02F2A236FAD005B8F3F /* StoreConfig.swift */,
+				4552D0302A236FAD005B8F3F /* AccountConfig.swift */,
+			);
+			path = Configs;
+			sourceTree = "<group>";
+		};
 		5E6123F7244E8B32004DDFF7 = {
 			isa = PBXGroup;
 			children = (
@@ -437,6 +476,7 @@
 			children = (
 				61A8CB8926166F2A002845E4 /* Model.swift */,
 				4552CFA02A236433005B8F3F /* Submodels */,
+				4552D0282A236FAD005B8F3F /* Configuration */,
 				4552D0232A236B03005B8F3F /* Objects */,
 				6111A1E426157D870046AAA9 /* Configuration.storekit */,
 			);
@@ -538,6 +578,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4552CFF92A236853005B8F3F /* NutritionRow.swift in Sources */,
+				4552D0332A236FAD005B8F3F /* OrderModelConfigurable.swift in Sources */,
 				4552CFF12A236853005B8F3F /* SmoothieHeaderView.swift in Sources */,
 				4552CFAA2A236466005B8F3F /* FavoriteSmoothiesModel.swift in Sources */,
 				4552D0262A236B03005B8F3F /* Smoothie.swift in Sources */,
@@ -551,22 +592,26 @@
 				4552CFF42A236853005B8F3F /* Smoothie+SwiftUI.swift in Sources */,
 				4552D00D2A236853005B8F3F /* CircleToggleStyle.swift in Sources */,
 				4552D0072A236853005B8F3F /* FavoriteSmoothies.swift in Sources */,
+				4552D0372A236FAD005B8F3F /* StoreConfig.swift in Sources */,
 				4552D0112A236853005B8F3F /* PurchaseButtonStyle.swift in Sources */,
 				4552CFF22A236853005B8F3F /* SmoothieCommands.swift in Sources */,
 				4552D0132A236853005B8F3F /* StepperView.swift in Sources */,
 				4552CFEC2A236853005B8F3F /* FrutaApp.swift in Sources */,
 				4552CFF32A236853005B8F3F /* RedeemSmoothieButton.swift in Sources */,
 				4552CFED2A236853005B8F3F /* SmoothieRow.swift in Sources */,
+				4552D0392A236FAD005B8F3F /* AccountModelConfigurable.swift in Sources */,
 				4552D0142A236853005B8F3F /* FlipView.swift in Sources */,
 				4552D0042A236853005B8F3F /* OrderPlacedViewModel.swift in Sources */,
 				4552D0272A236B03005B8F3F /* Ingredient.swift in Sources */,
 				4552D0002A236853005B8F3F /* DisplayableMeasurement.swift in Sources */,
 				4552CFF52A236853005B8F3F /* Ingredient+SwiftUI.swift in Sources */,
+				4552D0362A236FAD005B8F3F /* CommonConfig.swift in Sources */,
 				4552D00B2A236853005B8F3F /* AppSidebarNavigation.swift in Sources */,
 				4552CFFD2A236853005B8F3F /* Nutritions.swift in Sources */,
 				4552D01B2A236853005B8F3F /* RecipeView.swift in Sources */,
 				4552CFA82A236466005B8F3F /* AccountModel.swift in Sources */,
 				4552D0092A236853005B8F3F /* RewardsViewModel.swift in Sources */,
+				4552D0382A236FAD005B8F3F /* AccountConfig.swift in Sources */,
 				4552CFF82A236853005B8F3F /* NutritionFact+Decodable.swift in Sources */,
 				4552D0082A236853005B8F3F /* RewardsCard.swift in Sources */,
 				4552D0102A236853005B8F3F /* CapsuleButtonStyle.swift in Sources */,
@@ -576,6 +621,7 @@
 				4552D0212A236A52005B8F3F /* MeasurementView.swift in Sources */,
 				610F54EE26158DDB001D3AA0 /* AppTabNavigation.swift in Sources */,
 				4552D01E2A236853005B8F3F /* SmoothieMenu.swift in Sources */,
+				4552D0342A236FAD005B8F3F /* StoreModelConfigurable.swift in Sources */,
 				4552D0032A236853005B8F3F /* OrderPlacedView.swift in Sources */,
 				4552CFF02A236853005B8F3F /* SmoothieFavoriteButton.swift in Sources */,
 				4552D00C2A236853005B8F3F /* ContentView.swift in Sources */,
@@ -587,12 +633,14 @@
 				4552D01D2A236853005B8F3F /* RecipeList.swift in Sources */,
 				4552D0062A236853005B8F3F /* SmoothieListViewModel.swift in Sources */,
 				4552CFEF2A236853005B8F3F /* SmoothieList.swift in Sources */,
+				4552D0352A236FAD005B8F3F /* ConfigurationManager.swift in Sources */,
 				4552D0182A236853005B8F3F /* AnimatableFontModifier.swift in Sources */,
 				4552CFEE2A236853005B8F3F /* SmoothieView.swift in Sources */,
 				4552D0222A236A52005B8F3F /* MeasuredIngredient.swift in Sources */,
 				4552D0152A236853005B8F3F /* BubbleView.swift in Sources */,
 				4552D01A2A236853005B8F3F /* RecipeUnlockButton.swift in Sources */,
 				4552D0012A236853005B8F3F /* IngredientCard.swift in Sources */,
+				4552D0322A236FAD005B8F3F /* FavoriteSmoothiesModelConfigurable.swift in Sources */,
 				4552D00E2A236853005B8F3F /* Animations.swift in Sources */,
 				4552CFA62A236466005B8F3F /* OrderModel.swift in Sources */,
 			);

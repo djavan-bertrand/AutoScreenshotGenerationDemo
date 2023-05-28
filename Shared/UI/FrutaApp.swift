@@ -20,4 +20,12 @@ struct FrutaApp: App {
     }
 }
 
-let model = Model()
+let model = Model(forConfiguration: isRunningForConfiguration)
+/// Detect if the app is running for configuration
+var isRunningForConfiguration: Bool = {
+    #if DEBUG
+    return CommandLine.arguments.contains(ConfigurationManager.launchArgument)
+    #else
+    return false
+    #endif
+}()

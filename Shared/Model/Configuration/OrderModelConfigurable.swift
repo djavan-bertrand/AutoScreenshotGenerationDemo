@@ -9,27 +9,7 @@
 import Foundation
 import Combine
 
-struct Order {
-    static var orderCount = 0
-    static var orderNumber: Int {
-        orderCount += 1
-        return orderCount
-    }
-    let uuid = Self.orderNumber
-    private(set) var smoothie: Smoothie
-    private(set) var points: Int
-    var isReady: Bool
-}
-
-protocol OrderModel {
-    var currentOrder: Order? { get }
-    var orderFuture: Future<Bool, Never>? { get }
-
-    func orderSmoothie(_ smoothie: Smoothie) -> Future<Bool, Never>
-    func redeemSmoothie(_ smoothie: Smoothie) -> Future<Bool, Never>?
-}
-
-class OrderModelDefault: OrderModel {
+class OrderModelConfigurable: OrderModel {
     private(set) var currentOrder: Order?
     private(set) var orderFuture: Future<Bool, Never>?
     private var orderPromise: ((Result<Bool, Never>) -> Void)?
@@ -57,7 +37,7 @@ class OrderModelDefault: OrderModel {
         let orderId = order.uuid
         let future: Future<Bool, Never> = Future { promise in
             self.orderPromise = promise
-            DispatchQueue.main.asyncAfter(deadline: .now() + 10) {
+            DispatchQueue.main.asyncAfter(deadline: .now() + 0.8) {
                 if let order = self.currentOrder, order.uuid == orderId {
                     self.currentOrder?.isReady = true
                 }
@@ -65,7 +45,7 @@ class OrderModelDefault: OrderModel {
             }
         }
         orderFuture = future
-        DispatchQueue.main.asyncAfter(deadline: .now() + 0.5) {
+        DispatchQueue.main.asyncAfter(deadline: .now() + 0.05) {
             self.accountModel.appendOrder(order)
             if offered {
                 self.accountModel.redeemSmoothie()
