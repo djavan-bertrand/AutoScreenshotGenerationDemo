@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Compile and run the screenshots generator.
+# All args will be passed to the generateScreenshots swift binary.
+# You can run this script like this:
+# ./generateScreenshots d m:14ProMax,a:dark m:14ProMax m:8
+# or
+# ./generateScreenshots i
+
+cd ScreenshotsGenerator
+swift build -c release
+cd ..
+./ScreenshotsGenerator/.build/release/generateScreenshots $@
