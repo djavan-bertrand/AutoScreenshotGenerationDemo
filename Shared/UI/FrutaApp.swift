@@ -9,6 +9,16 @@ import SwiftUI
 /// - Tag: SingleAppDefinitionTag
 @main
 struct FrutaApp: App {
+    init() {
+        if isRunningForConfiguration {
+            UIView.setAnimationsEnabled(false)
+            let scenes = UIApplication.shared.connectedScenes
+            let windowScene = scenes.first as? UIWindowScene
+            let window = windowScene?.windows.first
+            window?.layer.speed = 100
+        }
+    }
+    
     var body: some Scene {
         WindowGroup {
             ContentView()

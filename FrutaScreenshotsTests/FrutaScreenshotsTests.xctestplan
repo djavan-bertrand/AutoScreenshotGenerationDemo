@@ -1,0 +1,41 @@
+{
+  "configurations" : [
+    {
+      "id" : "9B43E834-F4CE-4B88-AC12-5EECA7E72B4E",
+      "name" : "English",
+      "options" : {
+        "language" : "en"
+      }
+    },
+    {
+      "id" : "0586A53D-D88F-4676-83F4-D6082D399E09",
+      "name" : "Russian",
+      "options" : {
+        "commandLineArgumentEntries" : [
+
+        ],
+        "language" : "ru"
+      }
+    }
+  ],
+  "defaultOptions" : {
+    "codeCoverage" : false,
+    "commandLineArgumentEntries" : [
+
+    ],
+    "environmentVariableEntries" : [
+
+    ]
+  },
+  "testTargets" : [
+    {
+      "parallelizable" : true,
+      "target" : {
+        "containerPath" : "container:Fruta.xcodeproj",
+        "identifier" : "4552D03D2A2374C2005B8F3F",
+        "name" : "FrutaScreenshotsTests"
+      }
+    }
+  ],
+  "version" : 1
+}
